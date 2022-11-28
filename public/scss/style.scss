@@ -519,28 +519,6 @@ $shadow-box: 0 0 0 0.25rem rgba(240, 128, 128, 0.1) !important;
   height: 100vh;
   position: fixed;
   z-index: 999999;
-
-  //.circle {
-  //  width: 60px;
-  //  height: 60px;
-  //  border: 10px solid white;
-  //  border-radius: 10%;
-  //  border-top-color: $colr;
-  //  border-bottom-color: $colr;
-  //  position: absolute;
-  //  margin: auto;
-  //  top: 0;
-  //  bottom: 0;
-  //  left: 0;
-  //  right: 0;
-  //  animation: circle-rot 2s linear infinite;
-  //}
-  //
-  //@keyframes circle-rot {
-  //  100% {
-  //    transform: rotate(360deg);
-  //  }
-  //}
 }
 
 .owl-carousel {

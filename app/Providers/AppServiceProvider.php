@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\BasicInfo;
 use App\Models\Category;
 // use Facade\FlareClient\View;
 use Illuminate\Support\ServiceProvider;
@@ -31,5 +32,8 @@ class AppServiceProvider extends ServiceProvider
     {
         $categories = Category::all();
         View::share('categories_global', $categories);
+
+        $basic = BasicInfo::find(1);
+        View::share('basic_info', $basic);
     }
 }

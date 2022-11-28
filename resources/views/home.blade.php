@@ -51,25 +51,7 @@
                 <div class="col-md" data-aos="fade-right">
                     <h3>Description</h3>
                     <p>
-                        ISM Surgical is a group of younger professionals engaged in the manufacturing and export of
-                        Surgical, Dental and Beauty Care Instruments. ISM Surgical serving valued business colleagues
-                        all
-                        over the world. Keeps continuous grip over the quality and service standards as we believe in
-                        the
-                        best, therefore striving every moment to improve every aspect.
-                        To achieve the goals we provide our honorable clients quality products delivery within
-                        stipulated
-                        time limit ensured at any cost.
-                        We assure you our best service at all time with top quality, best price and on time delivery.
-                        Samples and prices can be obtained on demand.
-                        Deliveries of the orders are ensured within time. Although this website doesnot cover all the
-                        range
-                        of our products yet it assures you that we can make every type of Surgical Instruments, So we
-                        will
-                        welcome your all inquiries, also for your required designs which have not been listed in this
-                        website.
-                        Thanking in advance for visiting our website.
-                        Best Compliments From, ISM Surgical
+                        {{$basic_info->description}}
                     </p>
                 </div>
                 <div class="col-md align-self-center" data-aos="fade-left">
@@ -86,55 +68,19 @@
                 <h1>Feature Products</h1>
             </div>
             
-            
-        {{-- <section class="container text-center">
+    {{-- Carousal START --}}
+        <section class="container text-center">
             <div class="owl-carousel owl-theme owl-loaded">
                 <div class="owl-stage-outer">
                     <div class="owl-stage">
-                        <div class="owl-item"><img src="images/Products/Surgical/Scissors/1176.jpg" class="img-fluid" alt="Product"></div>
-                        <div class="owl-item"><img src="images/s4.jpg" class="img-fluid" alt="Product"></div>
-                        <div class="owl-item"><img src="images/Products/Surgical/Scissors/1179.jpg" class="img-fluid" alt="Product"></div>
-                        <div class="owl-item"><img src="images/Products/Surgical/Scissors/1185.jpg" class="img-fluid" alt="Product"></div>
-                        <div class="owl-item"><img src="images/Products/Surgical/Scissors/1192.jpg" class="img-fluid" alt="Product"></div>
-                        <div class="owl-item"><img src="images/Products/Barber-Scissors-Shears/Professional-Barber/1005.jpg" class="img-fluid" alt="Product"></div>
-                        <div class="owl-item"><img src="images/Products/Barber-Scissors-Shears/Professional-Barber/1011_.jpg" class="img-fluid" alt="Product"></div>
-                        <div class="owl-item"><img src="images/Products/Barber-Scissors-Shears/Professional-Barber/1015.jpg" class="img-fluid" alt="Product"></div>
-                        <div class="owl-item"><img src="images/Products/Surgical/Scissors/1188.jpg" class="img-fluid" alt="Product"></div>
-                        <div class="owl-item"><img src="images/Products/Barber-Scissors-Shears/Professional-Barber/1001.jpg" class="img-fluid" alt="Product"></div>
-                        <div class="owl-item"><img src="images/Products/Surgical/Scissors/1186.jpg" class="img-fluid" alt="Product"></div>
-                        <div class="owl-item"><img src="images/Products/Surgical/Scissors/1190.jpg" class="img-fluid" alt="Product"></div>
-                        <div class="owl-item"><img src="images/Products/Barber-Scissors-Shears/Professional-Barber/1020.jpg" class="img-fluid" alt="Product"></div>
-                        <div class="owl-item"><img src="images/Products/Barber-Scissors-Shears/Professional-Barber/1028.jpg" class="img-fluid" alt="Product"></div>
+                        @foreach ($owl_items as $owl_item)
+                        <div class="owl-item"><img src="storage/{{$owl_item->image}}" class="img-fluid" alt="Product"></div>
+                        @endforeach
                     </div>
                 </div>
             </div>
-        </section> --}}
-
-            <div class="row justify-content-center">
-                @foreach ($products as $product)     
-                <div class="col-md-2 shadow-sm">
-                    <div class="product-image border border-2 text-center">
-                        <img src="storage/{{$product->image}}" alt="Products" class="img-fluid home-product">
-                    </div>
-                    <p>{{$product->name}}</p>
-                    <div class="view-details-btn">
-                        <a href="{{route('products.item',['slug'=>$product->slug])}}" class="btn btn-outline-success">View Details</a>
-                    </div>
-                </div>
-                @endforeach
-                
-            </div>
-        </div>
-    </section>
-
-
-
-@endsection
-
-
-
-@push('js_custom')
-    <script>
+        </section>
+        <script>
         $(".owl-carousel").owlCarousel({
             center: false,
             items: 1,
@@ -163,4 +109,25 @@
             }
         });
     </script>
-@endpush
+    {{-- Carousal END --}}
+
+            <div class="row justify-content-center">
+                @foreach ($products as $product)     
+                <div class="col-md-2 shadow-sm">
+                    <div class="product-image border border-2 text-center">
+                        <img src="storage/{{$product->image}}" alt="Products" class="img-fluid home-product">
+                    </div>
+                    <p>{{$product->name}}</p>
+                    <div class="view-details-btn">
+                        <a href="{{route('products.item',['slug'=>$product->slug])}}" class="btn btn-outline-success">View Details</a>
+                    </div>
+                </div>
+                @endforeach
+                
+            </div>
+        </div>
+    </section>
+
+
+
+@endsection

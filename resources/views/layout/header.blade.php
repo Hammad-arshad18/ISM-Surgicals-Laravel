@@ -2,11 +2,11 @@
     <div class="news shadow-sm">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md col-5"><p><a href="tel:+447955008500"><i class="far fa-phone"></i> Mob: +44 7955 008500</a></p>
+                <div class="col-md col-5"><p><a href="tel:{{$basic_info->phone_no}}"><i class="far fa-phone"></i> Mob: {{$basic_info->phone_no}}</a></p>
                 </div>
-                <div class="col-md col-7"><p><a href="mailto:hammad.arshad672@gmail.com"><i class="far fa-envelope"></i>
+                <div class="col-md col-7"><p><a href="mailto:{{$basic_info->email}}"><i class="far fa-envelope"></i>
                     E-mail:
-                    hammad.arshad672@gmail.com</a></p></div>
+                    {{$basic_info->email}}</a></p></div>
             </div>
         </div>
     </div>
