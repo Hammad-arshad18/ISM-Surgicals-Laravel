@@ -21,15 +21,15 @@
                 <div class="col-12 col-md-3 offset-md-1">
                     <h4>Contact us</h4>
                     <ul>
-                        <li><a href="tel:{{$basic_info->phone_no}}"><i class="far fa-chevron-right"></i> {{$basic_info->phone_no}}</a></li>
                         <li><a><i class="far fa-chevron-right"></i> {{$basic_info->address}}</a></li>
-                        <li><a target="_blank" href="https://github.com/Hammad-arshad18"><i class="far fa-chevron-right"></i> Developer Contact</a></li>
+                        <li><a href="tel:+923328432678"> <i class="far fa-chevron-right"></i> Hammad Arshad</a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com/in/hammad-arshad18/"><i class="far fa-chevron-right"></i> Developer Contact</a></li>
                     </ul>
                 </div>
 
             </div>
             <div class="text-center copyright-portion">
-                <p>&copy; Copyright 2019 - {{Date("Y")}} - ISM SURGICALS</p>
+                <p>&copy; Copyright 2018 - {{Date("Y")}} - ISM SURGICALS</p>
             </div>
         </div>
     </section>

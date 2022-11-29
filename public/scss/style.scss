@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+a{
+  text-decoration: none;
+  color: black;
+}
 
 $colr: lightcoral;
 $shadow-box: 0 0 0 0.25rem rgba(240, 128, 128, 0.1) !important;
@@ -784,3 +788,236 @@ $shadow-box: 0 0 0 0.25rem rgba(240, 128, 128, 0.1) !important;
   }
 }
 }
+
+
+
+
+// Login Admin
+ .login_screen {
+   user-select: none;
+
+   .row {
+     .col-10 {
+       margin: 20px 0;
+       background-color: white;
+       height: 380px;
+       margin: auto;
+       position: absolute;
+       top: 0;
+       bottom: 0;
+       left: 0;
+       right: 0;
+       border-radius: 10px;
+       padding: 20px 10px;
+       border: 1px solid #c5c4c4;
+
+       h1 {
+         color: $colr;
+         font-weight: bold;
+         border-bottom: 2px solid $colr;
+         border-radius: 80%;
+         padding: 10px 0;
+         text-align: center;
+         text-transform: uppercase;
+       }
+
+
+       p {
+         text-align: center;
+         font-size: 17px;
+         padding: 10px 0;
+         text-transform: capitalize;
+         font-weight: 600;
+       }
+
+       .sign-up-portion {
+         p {
+           font-weight: bold;
+
+           a {
+             text-decoration: none;
+             color: $colr;
+           }
+         }
+       }
+
+       form {
+         .input-group {
+           padding: 8px 0;
+           margin: 5px 0;
+
+           .input-group-text {
+             background-color: white;
+             transition: 0.4s;
+
+             &:hover {
+               background-color: $colr;
+               color: white;
+             }
+
+             color: $colr;
+             font-weight: bold;
+           }
+
+           input {
+             box-shadow: none !important;
+             padding: 10px 5px;
+             transition: 0.2s;
+
+             &:focus {
+               border-color: $colr !important;
+             }
+           }
+         }
+
+         .submit_btn {
+           text-align: right;
+           padding: 5px 0;
+
+           button {
+             width: 120px;
+             background-color: $colr !important;
+             color: white;
+             border: 2px solid $colr;
+             padding: 6px 0;
+             box-shadow: none !important;
+             transition: 0.4s;
+
+             &:hover {
+               background-color: white !important;
+               color: $colr !important;
+             }
+           }
+         }
+       }
+     }
+    }
+  }
+
+
+
+
+  // Admin - Dashboard
+
+  .db-tables{
+    margin: 15px 0;
+    padding: 10px 0;
+
+    .row{
+      .col-md-3{
+        a{
+          transition: 0.3s ease-in-out;
+          &:hover{
+            color: $colr;
+          }
+        }
+          border: 1px solid rgb(173, 173, 173);
+          box-shadow: 1px 1px 4px rgb(173, 173, 173);
+          padding: 10px;
+          margin: 10px 20px;
+          transition: 0.4s ease-in-out;
+
+        .whole-column{
+
+          .image-portion{
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgb(173, 173, 173);
+          }
+
+          .details-portion {
+              margin: 10px 0;
+              .heading {
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 24px;
+              }
+          }
+        }
+        &:hover{
+          @media only screen and (min-width:768px) {
+            transform: translateX(-30px);
+          } 
+        }
+      }
+    }
+  }
+
+
+  // Basic Info - Admin
+
+  .basic-info{
+    margin: 15px 0;
+    padding: 10px 0;
+    .row{
+      .col-md-8{
+        form {
+            .form-text {
+              padding: 5px 0;
+            }
+        
+            label {
+              font-size: 14px;
+              font-weight: 500;
+            }
+        
+            input,
+            select,
+            textarea {
+              &:focus {
+                border-color: $colr !important;
+                box-shadow: $shadow-box;
+              }
+            }
+        
+            input[type="checkbox"] {
+              border-color: $colr;
+        
+              &:checked {
+                box-shadow: $shadow-box;
+                background-color: $colr;
+                color: white;
+              }
+            }
+        
+            .gender-section {
+              padding: 10px 0;
+        
+              .row {
+                .col-2 {
+                  .btn {
+                    box-shadow: none !important;
+                    width: 80px;
+                  }
+        
+                  margin-right: 5px;
+        
+                  @media only screen and (max-width: 576px) {
+                    margin-right: 25px !important;
+                  }
+                }
+              }
+            }
+        
+            .submit-btn {
+              padding: 10px 0;
+              margin: 5px 0;
+        
+              button {
+                width: 100%;
+                color: white;
+                background-color: $colr !important;
+                border: 2px solid $colr;
+                transition: 0.4s;
+        
+                &:hover {
+                  background-color: white !important;
+                  color: $colr;
+                }
+        
+                box-shadow: none !important;
+              }
+            }
+          }
+      }
+    }
+  }

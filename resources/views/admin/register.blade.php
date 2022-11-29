@@ -29,8 +29,8 @@
             <div class="row justify-content-center">
                 <div class="col-10 col-sm-9 col-md-5 col-lg-4 shadow-lg">
                     <h1>Login</h1>
-                    <p>Sign in to your account</p>
-                    <form action="{{url('/admin/login')}}" method="post">
+                    <p>Register New Admin</p>
+                    <form action="{{url('/admin/register')}}" method="post">
                         @csrf
                         <div class="input-group">
                             <span class="input-group-text"><i class="far fa-user"></i></span>

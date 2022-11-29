@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 ::selection {
   color: white;
   background-color: lightcoral;
@@ -621,6 +626,178 @@
 }
 .product-item .row .col-md-6 .get-in-bulk:focus {
   box-shadow: none !important;
+}
+
+.login_screen {
+  user-select: none;
+}
+.login_screen .row .col-10 {
+  margin: 20px 0;
+  background-color: white;
+  height: 380px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  padding: 20px 10px;
+  border: 1px solid #c5c4c4;
+}
+.login_screen .row .col-10 h1 {
+  color: lightcoral;
+  font-weight: bold;
+  border-bottom: 2px solid lightcoral;
+  border-radius: 80%;
+  padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.login_screen .row .col-10 p {
+  text-align: center;
+  font-size: 17px;
+  padding: 10px 0;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.login_screen .row .col-10 .sign-up-portion p {
+  font-weight: bold;
+}
+.login_screen .row .col-10 .sign-up-portion p a {
+  text-decoration: none;
+  color: lightcoral;
+}
+.login_screen .row .col-10 form .input-group {
+  padding: 8px 0;
+  margin: 5px 0;
+}
+.login_screen .row .col-10 form .input-group .input-group-text {
+  background-color: white;
+  transition: 0.4s;
+  color: lightcoral;
+  font-weight: bold;
+}
+.login_screen .row .col-10 form .input-group .input-group-text:hover {
+  background-color: lightcoral;
+  color: white;
+}
+.login_screen .row .col-10 form .input-group input {
+  box-shadow: none !important;
+  padding: 10px 5px;
+  transition: 0.2s;
+}
+.login_screen .row .col-10 form .input-group input:focus {
+  border-color: lightcoral !important;
+}
+.login_screen .row .col-10 form .submit_btn {
+  text-align: right;
+  padding: 5px 0;
+}
+.login_screen .row .col-10 form .submit_btn button {
+  width: 120px;
+  background-color: lightcoral !important;
+  color: white;
+  border: 2px solid lightcoral;
+  padding: 6px 0;
+  box-shadow: none !important;
+  transition: 0.4s;
+}
+.login_screen .row .col-10 form .submit_btn button:hover {
+  background-color: white !important;
+  color: lightcoral !important;
+}
+
+.db-tables {
+  margin: 15px 0;
+  padding: 10px 0;
+}
+.db-tables .row .col-md-3 {
+  border: 1px solid rgb(173, 173, 173);
+  box-shadow: 1px 1px 4px rgb(173, 173, 173);
+  padding: 10px;
+  margin: 10px 20px;
+  transition: 0.4s ease-in-out;
+}
+.db-tables .row .col-md-3 a {
+  transition: 0.3s ease-in-out;
+}
+.db-tables .row .col-md-3 a:hover {
+  color: lightcoral;
+}
+.db-tables .row .col-md-3 .whole-column .image-portion {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(173, 173, 173);
+}
+.db-tables .row .col-md-3 .whole-column .details-portion {
+  margin: 10px 0;
+}
+.db-tables .row .col-md-3 .whole-column .details-portion .heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .db-tables .row .col-md-3:hover {
+    transform: translateX(-30px);
+  }
+}
+
+.basic-info {
+  margin: 15px 0;
+  padding: 10px 0;
+}
+.basic-info .row .col-md-8 form .form-text {
+  padding: 5px 0;
+}
+.basic-info .row .col-md-8 form label {
+  font-size: 14px;
+  font-weight: 500;
+}
+.basic-info .row .col-md-8 form input:focus,
+.basic-info .row .col-md-8 form select:focus,
+.basic-info .row .col-md-8 form textarea:focus {
+  border-color: lightcoral !important;
+  box-shadow: 0 0 0 0.25rem rgba(240, 128, 128, 0.1) !important;
+}
+.basic-info .row .col-md-8 form input[type=checkbox] {
+  border-color: lightcoral;
+}
+.basic-info .row .col-md-8 form input[type=checkbox]:checked {
+  box-shadow: 0 0 0 0.25rem rgba(240, 128, 128, 0.1) !important;
+  background-color: lightcoral;
+  color: white;
+}
+.basic-info .row .col-md-8 form .gender-section {
+  padding: 10px 0;
+}
+.basic-info .row .col-md-8 form .gender-section .row .col-2 {
+  margin-right: 5px;
+}
+.basic-info .row .col-md-8 form .gender-section .row .col-2 .btn {
+  box-shadow: none !important;
+  width: 80px;
+}
+@media only screen and (max-width: 576px) {
+  .basic-info .row .col-md-8 form .gender-section .row .col-2 {
+    margin-right: 25px !important;
+  }
+}
+.basic-info .row .col-md-8 form .submit-btn {
+  padding: 10px 0;
+  margin: 5px 0;
+}
+.basic-info .row .col-md-8 form .submit-btn button {
+  width: 100%;
+  color: white;
+  background-color: lightcoral !important;
+  border: 2px solid lightcoral;
+  transition: 0.4s;
+  box-shadow: none !important;
+}
+.basic-info .row .col-md-8 form .submit-btn button:hover {
+  background-color: white !important;
+  color: lightcoral;
 }
 
 /*# sourceMappingURL=style.css.map */

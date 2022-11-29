@@ -46,7 +46,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
+</nav>
 
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop"
          aria-labelledby="offcanvasWithBackdropLabel">
