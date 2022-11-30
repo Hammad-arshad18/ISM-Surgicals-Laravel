@@ -51,7 +51,7 @@
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop"
          aria-labelledby="offcanvasWithBackdropLabel">
         <div class="offcanvas-header ">
-            <a href="/" ><h5 class="offcanvas-title shadow-sm" id="offcanvasWithBackdropLabel">ISM <span class="c_surgical">SURGICALS</span>
+            <a href="{{route('home')}}" ><h5 class="offcanvas-title shadow-sm" id="offcanvasWithBackdropLabel">ISM <span class="c_surgical">SURGICALS</span>
 
             </h5></a>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>

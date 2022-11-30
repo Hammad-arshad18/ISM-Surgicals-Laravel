@@ -17,6 +17,8 @@
                         <h3>Categories</h3>
                         <h5>Products</h5>
                         <ul>
+                            <li><a href="{{route('products')}}">All</a></li>
+
                             @foreach ($categories as $category)
                                 <li id="{{$category->id}}"><a href="{{route('products')}}?category={{$category->id}}">{{$category->name}}</a> <!--<span>67</span>--></li>
                             @endforeach
@@ -28,7 +30,7 @@
                          @foreach ($products as $product) 
                         <div data-aos="zoom-in-up" class="col-lg-3 shadow">
                             {{-- {{$product->get_category[0]->name}} --}}
-                            <a href="storage/{{$product->image}}" data-lightbox="image-1"><img src="storage/{{$product->image}}" alt="Image" class="img-fluid"/></a>
+                            <a href="{{url('')}}/storage/{{$product->image}}" data-lightbox="image-1"><img src="storage/{{$product->image}}" alt="Image" class="img-fluid"/></a>
                            <hr style="width: 90%; background-color: rgb(173, 173, 173); margin:10px auto;"/>
                             <div class="detail" style="float: left">
                                 <h5>{{$product->name}}</h5>

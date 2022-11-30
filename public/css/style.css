@@ -800,4 +800,40 @@ a {
   color: lightcoral;
 }
 
+.list-items {
+  margin: 15px 0;
+  padding: 10px 0;
+}
+.list-items .add-item-btn {
+  text-align: right;
+  margin: 10px 0;
+}
+.list-items .add-item-btn a {
+  color: white;
+  background-color: lightcoral !important;
+  border: 2px solid lightcoral;
+  transition: 0.4s;
+  box-shadow: none !important;
+}
+.list-items .add-item-btn a:hover {
+  background-color: white !important;
+  color: lightcoral;
+}
+.list-items table td, .list-items table th {
+  padding: 12px !important;
+}
+.list-items table td .delete-btn, .list-items table th .delete-btn {
+  color: white;
+  padding: 5px 10px;
+  background-color: rgb(179, 15, 15) !important;
+  border: 2px solid rgb(179, 15, 15);
+  transition: 0.4s;
+  border-radius: 4px;
+  box-shadow: none !important;
+}
+.list-items table td .delete-btn:hover, .list-items table th .delete-btn:hover {
+  background-color: white !important;
+  color: rgb(179, 15, 15);
+}
+
 /*# sourceMappingURL=style.css.map */

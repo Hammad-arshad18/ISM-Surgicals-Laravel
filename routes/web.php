@@ -27,11 +27,21 @@ Route::post('contact-us', [ContactusController::class, 'store'])->name('contact'
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin');
+
     Route::get('login', [AdminController::class, 'loginview'])->name('admin.login');
     Route::post('login', [AdminController::class, 'login']);
     Route::get('logout', [AdminController::class, 'logout'])->name('admin.logout');
-    Route::get('add/products', [AdminController::class, 'index'])->name('admin.add.products');
-    Route::get('add/categories', [AdminController::class, 'index'])->name('admin.add.categories');
+
+    Route::get('products', [AdminController::class, 'listProducts'])->name('admin.list.products');
+    Route::get('add/product', [AdminController::class, 'addProductView'])->name('admin.add.proudct');
+    Route::post('add/product', [AdminController::class, 'addProduct']);
+    Route::get('delete/product/{id}', [AdminController::class, 'deleteProduct'])->name('admin.product.delete');
+
+    Route::get('category', [AdminController::class, 'listCategories'])->name('admin.list.categories');
+    Route::get('add/category', [AdminController::class, 'addCategoryView'])->name('admin.add.categories');
+    Route::post('add/category', [AdminController::class, 'addCategory']);
+    Route::get('delete/category/{id}', [AdminController::class, 'deleteCategory'])->name('admin.category.delete');
+
     Route::get('update/info', [AdminController::class, 'info'])->name('admin.update.info');
     Route::post('update/info', [AdminController::class, 'updateInfo']);
 });

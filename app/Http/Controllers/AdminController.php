@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Admin;
 use App\Models\BasicInfo;
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -66,5 +68,64 @@ class AdminController extends Controller
         $info->description = $request['description'];
         $info->save();
         return redirect(route('admin'));
+    }
+
+
+    public function listProducts(){
+        $products=Product::all();
+        $data=compact('products');
+        return view('admin.products-list')->with($data);
+    }
+
+    public function addProductView(){
+        $cat=Category::all();
+        $data=compact('cat');
+        return view('admin.add-products')->with($data);
+    }
+
+    public function addProduct(Request $request)
+    {
+        $product=new Product;
+        $product->name=$request['name'];
+        $product->slug = str_replace(" ","-",strtolower($request['name']));
+        $product->category_id=$request['category'];
+        $product->description=$request['description'];
+        $image_name=str_replace("public/","",$request->file('image')->store('public'));
+        $product->image=$image_name;
+        $product->save();
+        return redirect(route('admin'));
+    }
+
+    public function deleteProduct(Product $id){
+        $id->delete();
+        return redirect()->back();
+    }
+
+
+    public function listCategories()
+    {
+        $categories = Category::all();
+        $data = compact('categories');
+        return view('admin.category-list')->with($data);
+    }
+
+    public function addCategoryView()
+    {
+        return view('admin.add-category');
+    }
+
+    public function addCategory(Request $request)
+    {
+        $category = new Category();
+        $category->name = $request['name'];
+        $category->slug = str_replace(" ", "-", strtolower($request['name']));
+        $category->save();
+        return redirect(route('admin'));
+    }
+
+    public function deleteCategory(Category $id)
+    {
+        $id->delete();
+        return redirect()->back();
     }
 }

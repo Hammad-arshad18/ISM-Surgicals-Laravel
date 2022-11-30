@@ -44,6 +44,30 @@
             </div>
     </nav>
 
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop"
+         aria-labelledby="offcanvasWithBackdropLabel">
+        <div class="offcanvas-header ">
+            <a href="{{route('home')}}" ><h5 class="offcanvas-title shadow-sm" id="offcanvasWithBackdropLabel">ISM <span class="c_surgical">SURGICALS</span>
+
+            </h5></a>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul>
+                 <li class="nav-item">
+                    <a href="{{route('admin')}}" class="nav-link"> Admin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('admin.logout')}}"><i class="fas fa-address-book"></i> Logout</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-canvas">
+            <p>&copy Copyright 2021 - {{Date('Y')}} || <a href="">Hammad Arshad</a></p>
+        </div>
+    </div>
+
 
 @yield('admin-main')
 
@@ -63,6 +87,8 @@
     });
     
 </script>
+
+@stack('admin-js')
 
 </body>
 </html>

@@ -1021,3 +1021,49 @@ $shadow-box: 0 0 0 0.25rem rgba(240, 128, 128, 0.1) !important;
       }
     }
   }
+
+
+  // List Items
+
+  .list-items{
+    margin: 15px 0;
+    padding: 10px 0;
+    .add-item-btn{
+      text-align: right;
+      margin: 10px 0;
+      a{
+        // width: 100%;
+          color: white;
+          background-color: $colr !important;
+          border: 2px solid $colr;
+          transition: 0.4s;
+        
+          &:hover {
+            background-color: white !important;
+            color: $colr;
+          }
+        
+          box-shadow: none !important;
+      }
+    }
+    table{
+      td,th{
+        padding: 12px!important;
+        .delete-btn{
+            color: white;
+            padding: 5px 10px;
+            background-color: rgb(179, 15, 15) !important;
+            border: 2px solid rgb(179, 15, 15);
+            transition: 0.4s;
+            border-radius: 4px;
+          
+            &:hover {
+              background-color: white !important;
+              color: rgb(179, 15, 15);
+            }
+          
+            box-shadow: none !important;
+        }
+      }
+    }
+  }
