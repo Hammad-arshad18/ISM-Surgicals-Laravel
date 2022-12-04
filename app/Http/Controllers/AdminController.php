@@ -7,6 +7,7 @@ use App\Models\BasicInfo;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class AdminController extends Controller
 {
@@ -97,7 +98,10 @@ class AdminController extends Controller
     }
 
     public function deleteProduct(Product $id){
+        $del_image=str_replace(url('').'/',"", $id->image);
+        File::delete($del_image);
         $id->delete();
+        // echo "<pre>$del_image</pre>";
         return redirect()->back();
     }
 

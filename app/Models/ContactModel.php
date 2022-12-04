@@ -12,6 +12,12 @@ class ContactModel extends Model
     protected $table = "contactus";
     protected $primaryKey = "id";
 
+    protected $fillable=[
+        'name',
+        'email',
+        'comment'
+    ];
+
     public function setPhoneAttribute($value)
     {
         $this->attributes['phone'] = preg_replace('/[^0-9]/', '', $value);

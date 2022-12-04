@@ -11,17 +11,17 @@ class Product extends Model
 
     protected $table = "product";
     protected $primaryKey = "id";
+    protected $fillable = ['name', 'slug', 'category_id', 'image', 'description'];
+    protected $hidden=['category_id'];
 
-    public $fillable = ['name', 'slug', 'category_id', 'image', 'description'];
+    // Relationship
+    function category(){
+        return $this->hasMany(Category::class, 'id','category_id');
+    }
 
-    // function getCategory()
-    // {
-    //     return $this->hasMany(Category::class, 'id', 'id');
-    // }
-
-    public function getCategoryIdAttribute($value)
-    {
-        $category = Category::find($value);
-        return $category->name;
+    // Accessors
+    public function getImageAttribute($value){
+        $image_name=url('')."/storage/$value";
+        return $image_name;
     }
 }

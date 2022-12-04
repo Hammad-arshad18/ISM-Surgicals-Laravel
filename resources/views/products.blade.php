@@ -30,11 +30,13 @@
                          @foreach ($products as $product) 
                         <div data-aos="zoom-in-up" class="col-lg-3 shadow">
                             {{-- {{$product->get_category[0]->name}} --}}
-                            <a href="{{url('')}}/storage/{{$product->image}}" data-lightbox="image-1"><img src="storage/{{$product->image}}" alt="Image" class="img-fluid"/></a>
+                            <a href="{{$product->image}}" data-lightbox="image-1"><img src="{{$product->image}}" alt="Image" class="img-fluid"/></a>
                            <hr style="width: 90%; background-color: rgb(173, 173, 173); margin:10px auto;"/>
                             <div class="detail" style="float: left">
                                 <h5>{{$product->name}}</h5>
-                                <h6>{{$product->category_id}}</h6>
+                                @foreach ($product->category as $cat)
+                                     <h6>{{$cat->name}}</h6>
+                                @endforeach 
                             </div>
                             <div class="btn-sale" style="float: right">
                                 <a href="{{route('products.item',['slug'=>$product->slug])}}" class="btn btn-success btn-sm">View</a>

@@ -17,7 +17,7 @@ class ProductController extends Controller
             $data = compact('products', 'categories');
             return view('products')->with($data);
         } else {
-            $products = Product::paginate(6);
+            $products = Product::orderBy('created_at','desc')->paginate(6);
             $categories = Category::all();
             $data = compact('products', 'categories');
             return view('products')->with($data);

@@ -9,10 +9,12 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-11 col-md-6 text-center align-self-center">
-                    <img src="{{url('')}}/storage/{{$product[0]->image}}" alt="{{$product[0]->image}}" class="product-image">
+                    <img src="{{$product[0]->image}}" alt="{{$product[0]->image}}" class="product-image">
                 </div>
                 <div class="col-11 col-md-6 align-self-center">
-                    <p class="category">Category: {{$product[0]->category_id}}</p>
+                    @foreach ($product[0]->category as $cat)
+                    <p class="category">Category: {{$cat->name}}</p>
+                    @endforeach
                     <h1 class="product-name">{{$product[0]->name}}</h1>
                     <p class="product-description">{{$product[0]->description}}</p>
                     <div class="get-in-btn text-end">

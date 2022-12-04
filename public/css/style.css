@@ -581,6 +581,7 @@ a {
 .product-item .row .col-md-6 .product-image {
   min-height: 300px;
   min-width: 300px;
+  max-width: 400px;
 }
 @media only screen and (max-width: 768px) {
   .product-item .row .col-md-6 .product-image {

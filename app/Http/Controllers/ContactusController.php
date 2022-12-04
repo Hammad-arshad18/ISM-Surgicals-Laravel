@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ContactModel;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Api\ContactAPIController;
 
 class ContactusController extends Controller
 {
@@ -26,6 +27,9 @@ class ContactusController extends Controller
         $contactUs->phone = $request['phone'];
         $contactUs->comment = $request['comment'];
         $contactUs->save();
+        // $con=new ContactAPIController;
+        // $con->store($request);
+
         return redirect(route('contact'));
     }
 }

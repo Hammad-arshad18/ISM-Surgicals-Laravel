@@ -74,7 +74,7 @@
                 <div class="owl-stage-outer">
                     <div class="owl-stage">
                         @foreach ($owl_items as $owl_item)
-                        <div class="owl-item"><img src="storage/{{$owl_item->image}}" class="img-fluid" alt="Product"></div>
+                        <div class="owl-item"><img src="{{$owl_item->image}}" class="img-fluid" alt="Product"></div>
                         @endforeach
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                 @foreach ($products as $product)     
                 <div class="col-md-2 shadow-sm">
                     <div class="product-image border border-2 text-center">
-                        <img src="storage/{{$product->image}}" alt="Products" class="img-fluid home-product">
+                        <img src="{{$product->image}}" alt="Products" class="img-fluid home-product">
                     </div>
                     <p>{{$product->name}}</p>
                     <div class="view-details-btn">
