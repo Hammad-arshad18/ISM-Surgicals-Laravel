@@ -26,7 +26,7 @@ class ProductController extends Controller
 
     public function product($slug = null)
     {
-        $product = Product::where('slug', '=', "$slug")->get();
+        $product = Product::where('slug',$slug)->get();
         $data = compact('product');
         return view('product-item')->with($data);
     }

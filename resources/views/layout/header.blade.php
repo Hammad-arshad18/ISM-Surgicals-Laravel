@@ -84,6 +84,6 @@
         </div>
 
         <div class="footer-canvas">
-            <p>&copy Copyright 2021 - {{Date('Y')}} || <a href="">Hammad Arshad</a></p>
+            <p>&copy Copyright 2018 - {{Date('Y')}} || ISM Surgicals</p>
         </div>
     </div>

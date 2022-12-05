@@ -133,7 +133,39 @@ class ProductsAPIController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $product=Product::find($id);
+        // echo "<pre>". $request->all()."</pre>";
+        // die();
+        if(is_null($product)){
+            return response()->json([
+                'message'=>'Product Not Found',
+                'status'=>0
+            ],404);
+        }else{
+            DB::beginTransaction();
+            try{
+                $slug = str_replace(" ", "-", strtolower($request->name));
+                $imageUpload = str_replace("public/", "", $request->file('image')->store('public'));
+                $product->name = $request->name;
+                $product->description = $request->description;
+                $product->image = $imageUpload;
+                $product->slug = $slug;
+                $product->category_id = $request->category_id;
+                $product->save();
+                DB::commit();
+                return response()->json([
+                    'message' => 'Data Updated Successfully',
+                    'status' => 1
+                ],200);
+            }catch(\Exception $err){
+                DB::rollBack();
+                return response()->json([
+                    'message' => 'Internal Server Error',
+                    'status' => 0,
+                    'error'=>$err->getMessage(),
+                ], 500);
+            }
+        }
     }
 
     /**
@@ -144,6 +176,19 @@ class ProductsAPIController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product=Product::find($id);
+        if(is_null($product)){
+            $response=[
+                'message'=>"Product Not Found",
+                'status'=>0
+            ];
+        }else{
+            $product->delete();
+            $response=[
+                'message'=>'Product Deleted Successfully',
+                'status'=>1
+            ];
+        }
+        return response()->json($response,200);
     }
 }
