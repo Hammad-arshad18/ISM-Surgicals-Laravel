@@ -3,4 +3,4 @@
 
 ## License
 
-The ISM Project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The ISM Surgical Project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT) To Hammad Arshad.
