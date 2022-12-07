@@ -43,6 +43,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('contact')}}"><i class="fas fa-address-book"></i> Contact Us</a>
                     </li>
+                    <li class="nav-item" id="cart-icon" style="display: none">
+                        <a class="nav-link" id="cart-btn" href="{{route('cart')}}"><i class="fas fa-shopping-cart"></i> Cart <span class="badge rounded-pill bg-danger" id="cart-length">0<span></a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -73,12 +76,14 @@
                         @foreach ($categories_global as $cat)
                         <li><a href="{{route('products')}}?category={{$cat->id}}" class="dropdown-item">{{$cat->name}}</a></li>
                         @endforeach
-                        {{-- <li><a class="dropdown-item" href="#">Category2</a></li>
-                        <li><a class="dropdown-item" href="#">Category3</a></li> --}}
                     </ul>
                 </li>
                 <li>
                     <a class="nav-link" href="{{route('contact')}}"><i class="fas fa-address-book"></i> Contact Us</a>
+                </li>
+                
+                <li class="nav-item" id="cart-icon" style="display: none">
+                        <a class="nav-link" id="cart-btn" href="{{route('cart')}}"><i class="fas fa-shopping-cart"></i> Cart <span class="badge rounded-pill bg-danger" id="cart-length">0<span></a>
                 </li>
             </ul>
         </div>

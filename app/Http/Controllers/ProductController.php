@@ -30,4 +30,9 @@ class ProductController extends Controller
         $data = compact('product');
         return view('product-item')->with($data);
     }
+
+
+    public function cart(){
+        return view('cart');
+    }
 }

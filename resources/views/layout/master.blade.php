@@ -47,7 +47,19 @@
         $(".loader").fadeOut(1000);
         $(".main-content").fadeIn(1000);
     });
-    
+    cartUpdate();
+
+    function cartUpdate(){
+        if(localStorage.getItem('cart')!=null){
+        $("#cart-icon").show();
+        $("#cart-length").html(JSON.parse(localStorage.getItem('cart')).length)
+    }
+
+    clearCart=()=>{
+        localStorage.clear();
+        $("#cart-icon").hide();
+    }
+    }
 </script>
 @stack('js_custom')
 
