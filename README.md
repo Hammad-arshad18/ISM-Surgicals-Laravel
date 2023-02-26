@@ -1,4 +1,4 @@
-<p align="center"><a href="https://ism-surgicals1.000webhostapp.com/images/logo.png" width="400"></a></p>
+<p align="center"><img src="https://ism-surgicals1.000webhostapp.com/images/logo.png" width="400"></img></p>
 
 
 ## License
